@@ -58,4 +58,4 @@ Instale as dependências do projeto (neste caso apenas o Electron)
 npm i
 ```
 
-Execute o arquivo `encoder.py` utilizando o comando `npm run app`
+Execute o app utilizando o comando `npm run app`
