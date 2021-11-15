@@ -32,7 +32,7 @@
 
 <h2>Pre-requisitos :books: </h2>
 
-Nenhuma ferramenta de pre-requisito necessaria.
+<!-- Nenhuma ferramenta de pre-requisito necessaria. -->
 
 <ul>
 <li>Git</li>
