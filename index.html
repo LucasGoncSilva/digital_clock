@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="icon.svg">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;700&display=swap');
+
+        * {
+            margin: 0;
+        }
+
+        html {
+            background: #061626;
+            color: #0af;
+            font: 30px "Ubuntu", sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: fit-content;
+        }
+
+        body {
+            margin: auto;
+            display: grid;
+            place-items: center;
+            grid-column-gap: 20px;
+            grid-template-columns: auto auto auto;
+        }
+
+        h1 {
+            font-weight: 700;
+            margin: auto;
+        }
+
+        span {
+            font-weight: 300;
+            color: #036fdb;
+        }
+
+    </style>
+
+    <title>Digital Clock</title>
+
+</head>
+
+<body>
+
+    <h1 id="clock">00h 00' 00"</h1>
+
+    <script>
+
+        function showTime() {
+
+            const date = new Date()
+
+            let h = date.getHours()
+            let m = date.getMinutes()
+            let s = date.getSeconds()
+
+            if (h < 10) { h = `0${h}` }
+            if (m < 10) { m = `0${m}` }
+            if (s < 10) { s = `0${s}` }
+
+            let time = `<p>${h}<span>h</span> ${m}<span>'</span> ${s}<span>"</span></p>`
+
+            document.querySelector('#clock').innerHTML = time
+
+        }
+
+        setInterval(() => { showTime() }, 499);
+
+    </script>
+
+</body>
+
+</html>
