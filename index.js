@@ -1,8 +1,8 @@
-const { app, BrowserWindow} = require('electron')
+const { app, BrowserWindow } = require('electron')
 
-let mainWindow;
+let mainWindow
 
-app.on('ready', ()=>{
+app.on('ready', () => {
 
     mainWindow = new BrowserWindow({
         width: 500,
@@ -13,4 +13,5 @@ app.on('ready', ()=>{
     })
 
     mainWindow.loadURL(`file://${__dirname}/index.html`)
+    
 })
